@@ -16,22 +16,33 @@
       font-family: 'Fredoka', sans-serif;
       background-color: #f4efe9;
       color: #000;
-      overflow-x: hidden;
-    }
-
-    h1, h2, h5, p {
-      color: #000;
     }
 
     .hero {
-      text-align: center;
       padding: 60px 20px 100px;
       position: relative;
     }
 
     .logo {
+      display: block;
+      margin: 0 auto 20px;
       max-width: 350px;
-      margin-bottom: 10px;
+    }
+
+    h1, h2, h5 {
+      color: #000;
+    }
+
+    .content {
+      max-width: 800px;
+      margin: auto;
+      text-align: left;
+      line-height: 1.8;
+      font-size: 18px;
+    }
+
+    .section {
+      padding: 80px 20px;
     }
 
     .btn-main {
@@ -42,12 +53,8 @@
       border: none;
     }
 
-    .btn-main:hover {
-      background-color: #5a98a5;
-    }
-
-    .section {
-      padding: 80px 20px;
+    .newsletter-inline {
+      margin: 40px 0;
     }
 
     .card {
@@ -56,23 +63,17 @@
       background-color: #f8f3ed;
     }
 
-    .newsletter {
-      background-color: #c9d6dc;
-      text-align: center;
-      padding: 60px 20px;
-    }
-
     /* 🍪 decoraciones */
     .cookie {
       position: absolute;
       width: 120px;
-      opacity: 0.9;
     }
 
     .cookie1 { top: 20px; left: 20px; }
     .cookie2 { top: 50px; right: 30px; }
     .cookie3 { bottom: 20px; left: 50px; }
     .cookie4 { bottom: 40px; right: 40px; }
+
   </style>
 </head>
 
@@ -89,25 +90,54 @@
 
   <img src="logo.png" class="logo" alt="JOWI'S">
 
-  <h1 class="fw-bold">Galletas artesanales irresistibles</h1>
-  <p>Hechas con ingredientes reales, sabor real.</p>
+  <div class="content">
+    <h1 class="fw-bold text-center mb-4">Galletas rellenas</h1>
 
-  <a href="#productos" class="btn btn-main mt-3">Ver productos</a>
-</section>
-
-<!-- SOBRE -->
-<section class="section text-center">
-  <div class="container">
-    <h2 class="fw-bold">Sobre JOWI'S</h2>
-    <p class="mt-3">
-      En JOWI'S hacemos galletas frescas todos los días con ingredientes de alta calidad.
-      Nuestro objetivo es darte una experiencia dulce que realmente valga la pena.
+    <p>
+      He probado cualquier cantidad de galletas, brownies, repostería, café, etc. 
+      Soy fan de estos lugares. De mis experiencias favoritas es cuando te sorprenden 
+      con un centro líquido, típicamente de chocolate, cuando menos te lo esperas.
     </p>
+
+    <p>
+      Me ha pasado, por ejemplo, con los famosos volcanes de chocolate. 
+      Esos queques de chocolate que rellenan de todavía más chocolate por algún motivo, 
+      como si no hubiera límite alguno de lo que se puede hacer. 
+      Es sin duda una prueba de que nunca es suficiente chocolate. 
+      Y lo he probado, por supuesto, en las galletas JOWI'S.
+    </p>
+
+    <!-- FORMULARIO -->
+    <div class="newsletter-inline">
+      <form class="row g-2">
+        <div class="col-md-8">
+          <input type="email" class="form-control" placeholder="Tu correo" required>
+        </div>
+        <div class="col-md-4">
+          <button class="btn btn-main w-100">Suscribirme</button>
+        </div>
+      </form>
+    </div>
+
+    <p>
+      Como si no fuera suficiente la cantidad irracional de choco chips, 
+      te topas con un ridículo centro líquido de todavía más chocolate. 
+      No tiene sentido. Y es que no tiene que tenerlo. 
+      Si te parece demasiado seguramente no sea para ti, es así de sencillo.
+    </p>
+
+    <p>
+      Si es el caso, te recomiendo no comerla. 
+      Si, por el contrario, quieres que esta experiencia sea parte de tu vida, 
+      apúntate aquí:
+    </p>
+
   </div>
+
 </section>
 
 <!-- PRODUCTOS -->
-<section id="productos" class="section">
+<section class="section">
   <div class="container">
     <h2 class="text-center fw-bold mb-5">Nuestras galletas</h2>
 
@@ -141,24 +171,6 @@
   </div>
 </section>
 
-<!-- NEWSLETTER -->
-<section class="newsletter">
-  <div class="container">
-    <h2 class="fw-bold">Suscribete</h2>
-    <p>Recibe promociones y novedades</p>
-
-    <form class="row justify-content-center mt-3">
-      <div class="col-md-4">
-        <input type="email" class="form-control" placeholder="Tu correo" required>
-      </div>
-      <div class="col-md-2 mt-2 mt-md-0">
-        <button class="btn btn-main w-100">Suscribirme</button>
-      </div>
-    </form>
-  </div>
-</section>
-
-<!-- FOOTER -->
 <footer class="text-center p-4">
   <p>© 2026 JOWI'S</p>
 </footer>
