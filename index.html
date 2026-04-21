@@ -25,20 +25,16 @@
 
     .logo {
       display: block;
-      margin: 0 auto 20px;
+      margin: 0 auto 30px;
       max-width: 350px;
-    }
-
-    h1, h2, h5 {
-      color: #000;
     }
 
     .content {
       max-width: 800px;
       margin: auto;
       text-align: left;
-      line-height: 1.8;
-      font-size: 18px;
+      line-height: 2;
+      font-size: 20px; /* 🔥 texto más grande */
     }
 
     .section {
@@ -63,7 +59,6 @@
       background-color: #f8f3ed;
     }
 
-    /* 🍪 decoraciones */
     .cookie {
       position: absolute;
       width: 120px;
@@ -74,12 +69,16 @@
     .cookie3 { bottom: 20px; left: 50px; }
     .cookie4 { bottom: 40px; right: 40px; }
 
+    .form-check {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
   </style>
 </head>
 
 <body>
 
-<!-- HERO -->
 <section class="hero">
 
   <!-- decoraciones -->
@@ -91,7 +90,6 @@
   <img src="logo.png" class="logo" alt="JOWI'S">
 
   <div class="content">
-    <h1 class="fw-bold text-center mb-4">Galletas rellenas</h1>
 
     <p>
       He probado cualquier cantidad de galletas, brownies, repostería, café, etc. 
@@ -107,14 +105,23 @@
       Y lo he probado, por supuesto, en las galletas JOWI'S.
     </p>
 
-    <!-- FORMULARIO -->
+    <!-- FORM 1 -->
     <div class="newsletter-inline">
-      <form class="row g-2">
-        <div class="col-md-8">
-          <input type="email" class="form-control" placeholder="Tu correo" required>
+      <form>
+        <div class="row g-2">
+          <div class="col-md-8">
+            <input type="email" class="form-control" placeholder="Tu correo" required>
+          </div>
+          <div class="col-md-4">
+            <button class="btn btn-main w-100">Suscribirme</button>
+          </div>
         </div>
-        <div class="col-md-4">
-          <button class="btn btn-main w-100">Suscribirme</button>
+
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" required>
+          <label class="form-check-label">
+            Acepto la política de privacidad
+          </label>
         </div>
       </form>
     </div>
@@ -126,6 +133,27 @@
       Si te parece demasiado seguramente no sea para ti, es así de sencillo.
     </p>
 
+    <!-- FORM 2 -->
+    <div class="newsletter-inline">
+      <form>
+        <div class="row g-2">
+          <div class="col-md-8">
+            <input type="email" class="form-control" placeholder="Tu correo" required>
+          </div>
+          <div class="col-md-4">
+            <button class="btn btn-main w-100">Suscribirme</button>
+          </div>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" required>
+          <label class="form-check-label">
+            Acepto la política de privacidad
+          </label>
+        </div>
+      </form>
+    </div>
+
     <p>
       Si es el caso, te recomiendo no comerla. 
       Si, por el contrario, quieres que esta experiencia sea parte de tu vida, 
@@ -136,7 +164,6 @@
 
 </section>
 
-<!-- PRODUCTOS -->
 <section class="section">
   <div class="container">
     <h2 class="text-center fw-bold mb-5">Nuestras galletas</h2>
