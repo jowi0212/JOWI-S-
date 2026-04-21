@@ -8,25 +8,30 @@
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Fredoka Font -->
+  <!-- Fredoka -->
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
     body {
       font-family: 'Fredoka', sans-serif;
       background-color: #f4efe9;
-      color: #5a3e2b;
+      color: #000;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h5, p {
+      color: #000;
     }
 
     .hero {
       text-align: center;
-      padding: 100px 20px;
+      padding: 60px 20px 100px;
       position: relative;
     }
 
-    .hero img.logo {
-      max-width: 280px;
-      margin-bottom: 20px;
+    .logo {
+      max-width: 350px;
+      margin-bottom: 10px;
     }
 
     .btn-main {
@@ -48,7 +53,6 @@
     .card {
       border: none;
       border-radius: 20px;
-      overflow: hidden;
       background-color: #f8f3ed;
     }
 
@@ -57,6 +61,18 @@
       text-align: center;
       padding: 60px 20px;
     }
+
+    /* 🍪 decoraciones */
+    .cookie {
+      position: absolute;
+      width: 120px;
+      opacity: 0.9;
+    }
+
+    .cookie1 { top: 20px; left: 20px; }
+    .cookie2 { top: 50px; right: 30px; }
+    .cookie3 { bottom: 20px; left: 50px; }
+    .cookie4 { bottom: 40px; right: 40px; }
   </style>
 </head>
 
@@ -64,6 +80,13 @@
 
 <!-- HERO -->
 <section class="hero">
+
+  <!-- decoraciones -->
+  <img src="https://cdn-icons-png.flaticon.com/512/1047/1047711.png" class="cookie cookie1">
+  <img src="https://cdn-icons-png.flaticon.com/512/1047/1047711.png" class="cookie cookie2">
+  <img src="https://cdn-icons-png.flaticon.com/512/1047/1047711.png" class="cookie cookie3">
+  <img src="https://cdn-icons-png.flaticon.com/512/1047/1047711.png" class="cookie cookie4">
+
   <img src="logo.png" class="logo" alt="JOWI'S">
 
   <h1 class="fw-bold">Galletas artesanales irresistibles</h1>
@@ -121,7 +144,7 @@
 <!-- NEWSLETTER -->
 <section class="newsletter">
   <div class="container">
-    <h2 class="fw-bold">Suscríbete</h2>
+    <h2 class="fw-bold">Suscribete</h2>
     <p>Recibe promociones y novedades</p>
 
     <form class="row justify-content-center mt-3">
