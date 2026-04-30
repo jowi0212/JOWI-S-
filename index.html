@@ -122,13 +122,15 @@
         <input 
           type="email" 
           name="EMAIL" 
+          id="email-input"
           class="form-control" 
           placeholder="Tu correo" 
           required>
+        <div id="email-feedback" style="margin-top:10px; font-size:14px;"></div>
       </div>
 
       <div class="col-md-4">
-        <button type="submit" class="btn btn-main w-100">
+        <button type="submit" id="submit-btn" class="btn btn-main w-100">
           Suscribirme
         </button>
       </div>
@@ -180,13 +182,15 @@
         <input 
           type="email" 
           name="EMAIL" 
+          id="email-input"
           class="form-control" 
           placeholder="Tu correo" 
           required>
+        <div id="email-feedback" style="margin-top:10px; font-size:14px;"></div>
       </div>
 
       <div class="col-md-4">
-        <button type="submit" class="btn btn-main w-100">
+        <button type="submit" id="submit-btn" class="btn btn-main w-100">
           Suscribirme
         </button>
       </div>
@@ -230,5 +234,51 @@
   <p>© 2026 JOWI'S</p>
 </footer>
 <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+
+<script>
+const forms = document.querySelectorAll('form');
+
+forms.forEach(form => {
+
+  const emailInput = form.querySelector('#email-input');
+  const feedback = form.querySelector('#email-feedback');
+  const button = form.querySelector('#submit-btn');
+
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  // Validación en tiempo real
+  emailInput.addEventListener('input', () => {
+    if (emailInput.value === "") {
+      feedback.textContent = "";
+      return;
+    }
+
+    if (!regex.test(emailInput.value)) {
+      feedback.textContent = "Ese correo no parece real.";
+      feedback.style.color = "red";
+    } else {
+      feedback.textContent = "Correo válido.";
+      feedback.style.color = "green";
+    }
+  });
+
+  // Antes de enviar
+  form.addEventListener('submit', function(e) {
+
+    if (!regex.test(emailInput.value)) {
+      e.preventDefault();
+      feedback.textContent = "Necesitas un correo válido para entrar.";
+      feedback.style.color = "red";
+      return;
+    }
+
+    // Estado enviando
+    button.disabled = true;
+    button.textContent = "Enviando...";
+  });
+
+});
+</script>  
+  
 </body>
 </html>
